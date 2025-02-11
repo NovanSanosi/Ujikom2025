@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #121212;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Pastikan konten berada di tengah vertikal */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: #1f1f1f;
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+    transition: 0.3s;
+    left: 0;
+    top: 0;
+}
+
+.sidebar h2 {
+    color: #6a82fb;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #6a82fb;
+    transform: translateX(5px);
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+/* Main Content */
+.content {
+    margin-left: 270px; /* Agar tidak tertutup sidebar */
+    width: calc(100% - 270px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Pastikan berada di tengah */
+}
+
+.container {
+    width: 500px;
+    background: #1e1e2f;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Judul */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #6a82fb;
+    font-size: 24px;
+}
+
+/* Input dan Tombol */
+.input-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.input-control {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    background: #28293d;
+    color: #fff;
+    outline: none;
+    width: 100%;
+    text-align: center;
+}
+
+.btn {
+    padding: 14px 20px;
+    background: #6a82fb;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.btn:hover {
+    background: #fc5c7d;
+}
+
+/* Daftar Tugas */
+.task-list {
+    margin-top: 20px;
+}
+
+.task-item {
+    background: #28293d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-size: 20px;
+    text-align: center;
+}
+
+.task-item:hover {
+    background: #3c3f52;
+}
+
+.task-item span {
+    flex: 1;
+    font-size: 22px;  /* Ukuran task diperbesar */
+    font-weight: 500;
+    text-align: center;
+}
+
+.task-item a {
+    text-decoration: none;
+    color: #fc5c7d;
+    font-size: 24px;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.task-item a:hover {
+    color: #fff;
+}
+
+/* Jika tidak ada tugas */
+.empty {
+    text-align: center;
+    color: #888;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.username {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Logout Button */
+.logout {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.logout a {
+    text-decoration: none;
+    color: #fc5c7d;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.logout a:hover {
+    color: #fff;
+}
+
+.logout i {
+    margin-right: 10px;
+    font-size: 20px;
+}
