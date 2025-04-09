@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e1e2f, #121212);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh; /* Gunakan tinggi penuh viewport */
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: #1f1f1f;
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+    transition: 0.3s ease-in-out;
+    left: 0;
+    top: 0;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar h2 {
+    color: #6a82fb;
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #6a82fb;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.sidebar ul li a i {
+    margin-right: 12px;
+    font-size: 20px;
+}
+
+/* Main Content */
+.content {
+    flex-grow: 1;
+    margin-left: 250px;
+    padding: 20px;
+    overflow-y: auto;
+    width: calc(100% - 270px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: margin-left 0.3s ease;
+}
+
+.container {
+    width: 450px;
+    background: rgba(30, 30, 47, 0.9);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Judul */
+h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #6a82fb;
+    font-size: 24px;
+}
+
+/* Input & Button */
+.input-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.input-control {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #28293d;
+    color: #fff;
+    outline: none;
+    width: 100%;
+    text-align: center;
+}
+
+.btn {
+    padding: 14px 20px;
+    background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #fc5c7d, #6a82fb);
+}
+
+/* Daftar Tugas */
+.task-list {
+    margin-top: 20px;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 10px;
+    background: #1f1f1f;
+}
+
+.task-item {
+    background: #28293d;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+}
+
+/* Efek Hover pada Task */
+.task-item:hover {
+    background: #3c3f52;
+    transform: scale(1.02);
+}
+
+/* Checkbox */
+.task-item input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #6a82fb;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 12px;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* Efek ketika dicentang */
+.task-item input[type="checkbox"]:checked {
+    background: #6a82fb;
+    border: 2px solid #6a82fb;
+}
+
+.task-item input[type="checkbox"]:checked::after {
+    content: "✔";
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    top: 1px;
+    left: 4px;
+}
+
+/* Teks Tugas */
+.task-item span {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+}
+
+/* Tombol Hapus */
+.task-item a {
+    text-decoration: none;
+    color: #fc5c7d;
+    font-size: 20px;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.task-item a:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Jika tidak ada tugas */
+.empty {
+    text-align: center;
+    color: #888;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Logout Button */
+.logout {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.logout a {
+    text-decoration: none;
+    color: #fc5c7d;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.logout a:hover {
+    color: #fff;
+}
+
+.logout i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 220px;
+        width: calc(100% - 220px);
+    }
+
+    .container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sidebar {
+        width: 180px;
+    }
+
+    .content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .task-item {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+.completed-task {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.7;
+}
